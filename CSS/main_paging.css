@@ -1,0 +1,107 @@
+
+.page-section-cont {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: max-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.page-section-cont .unhighlighted {
+    flex: 1;
+    height: 35px;
+    width: 100px;
+    /* margin: 10px; */
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100px;
+    border: none;
+    font-family: 'Ageo';
+    font-size: 16px;
+    color: #2a2a2a;
+    cursor: pointer;
+    transition: .3s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);
+    transition: .8s cubic-bezier(0.15, 0.8, 0.22, 0.87);
+}
+
+.page-section-cont .unhighlighted p {
+    position: absolute;
+    z-index: 2;
+}
+
+.page-section-cont .unhighlighted .un-h-bg {
+    width: 0%;
+    height: 0%;
+    background-color: white;
+
+    transition: .8s cubic-bezier(0.15, 0.8, 0.22, 0.87);
+    opacity: 0.25;
+    border-radius: 100px;
+}
+
+
+.page-section-cont .unhighlighted:hover {
+
+    >.un-h-bg {
+        width: 100%;
+        opacity: 1;
+        height: 100%;
+    }
+      background-color: rgba(255, 255, 255, 1);
+
+}
+
+.page-section-cont #highlighted {
+    flex: 1;
+    height: 35px;
+    width: 100px;
+    /* margin: 10px; */
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 100px;
+    border: none;
+    font-family: 'Ageo';
+    font-size: 16px;
+    background-color: #2a2a2a;
+    color: white;
+    cursor: default;
+}
+
+.page-section-cont .page-action {
+    cursor: pointer;
+    background-color: #2A2A2A;
+    width: 35px;
+    height: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+}
+
+.page-section-cont #page-next {
+
+    background-image: url(Resources/Images/icon-next-inverted.png);
+    margin-left: 10px;
+    border: none;
+}
+
+.page-section-cont #page-prev {
+
+    background-image: url(Resources/Images/icon-prev-inverted.png);
+    margin-right: 10px;
+    border: none;
+}
+
+
+.page-section-cont .page-action:hover {
+    background-color: #414141;
+}

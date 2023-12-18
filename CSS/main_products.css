@@ -1,0 +1,1741 @@
+@font-face {
+    font-family: Squatina;
+    src: url(Resources/Fonts/Squatina-Regular.otf);
+}
+
+@font-face {
+    font-family: Ageo;
+    src: url(Resources/Fonts/AgeoPersonalUse-Medium.otf);
+}
+
+
+@font-face {
+    font-family: AgeoBold;
+    src: url(Resources/Fonts/AgeoPersonalUse-ExtraBold.otf);
+}
+
+@keyframes ContShake {
+    0% {
+
+        background-color: #EB5749;
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(-50px);
+
+        background-color: #EB5749;
+    }
+
+    100% {
+        transform: translateY(-10px);
+
+    }
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    background-color: #e4e4e4;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #2A2A2A;
+    color: white;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    top: 0;
+
+}
+
+.navbar .nav-logo-section {
+    position: absolute;
+    font-family: Squatina;
+    font-weight: 100;
+    margin: 5px;
+    background-image: url(Resources/Icons/icon-logo.svg);
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    padding-left: 10px;
+    background-size: contain;
+
+}
+
+.navbar .nav-sections {
+    text-align: center;
+}
+
+.navbar .nav-sections a {
+    color: white;
+    text-decoration: none;
+    font-family: Ageo;
+    margin: 15px;
+    font-size: 20px;
+}
+
+.navbar .nav-sections a:hover {
+    color: #EB5749;
+}
+
+
+.navbar h1 {
+    margin-top: 0;
+    margin-left: 30px;
+    font-size: 30px;
+    font-weight: 100;
+    transform: translateY(2px);
+}
+
+.navbar .nav-user {
+    position: absolute;
+    right: 0;
+    display: flex;
+    margin-right: 5vw;
+}
+
+.navbar .nav-user .nav-cart {
+    display: flex;
+    margin-right: 25px;
+    transition: .3s cubic-bezier(0.19, 0.82, 0.17, 0.83);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.navbar .nav-user .nav-cart:hover {
+    background-color: #1d1d1d;
+}
+
+.navbar .nav-user .nav-cart img {
+    height: 20px;
+    margin: 10px;
+}
+
+.navbar .nav-user .nav-cart p {
+    align-self: center;
+    background: white;
+    color: #2a2a2a;
+    padding: 0px 10px 0px 10px;
+    border-radius: 50px;
+    font-family: 'Ageo';
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.navbar .nav-user .nav-account {
+    display: flex;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .3s cubic-bezier(0.19, 0.82, 0.17, 0.83);
+}
+
+.navbar .nav-user .nav-account:hover {
+
+    background-color: #1d1d1d;
+}
+
+.navbar .nav-user .nav-account img {
+    height: 20px;
+
+    margin: 10px;
+}
+
+.navbar .nav-user .nav-account p {
+    align-self: center;
+    font-family: 'Ageo';
+    font-size: 20px;
+    margin-right: 10px;
+    user-select: none;
+}
+
+.navbar .nav-user .nav-account a {
+    align-self: center;
+    font-family: 'Ageo';
+    font-size: 20px;
+    margin-right: 10px;
+    color: #e4e4e4;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* margin-top: 85px; */
+    top: 60px;
+    overflow-y: scroll;
+    height: calc(100vh - 60px);
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-x: hidden;
+}
+.category-cont{
+    text-align: center;
+}
+
+.category-cont div {
+    
+    font-family: 'Ageo';
+    background: white;
+    padding: 20px;
+    border-radius: 100px;
+}
+
+.category-cont .category-button {
+    background: white;
+    border: none;
+    border-radius: 100px;
+    font-family: 'Ageo';
+    font-size: 16px;
+    height: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 10px;
+    cursor: pointer;
+    transition: .3s cubic-bezier(0.22, 0.9, 0.2, 0.9);
+}
+
+.category-cont .category-button:hover {
+
+    padding-left: 23px;
+    padding-right: 23px;
+    background: #f8f8f8;
+}
+
+.category-cont .category-button-highlighted {
+    background: #2A2A2A;
+    border: none;
+    border-radius: 100px;
+    font-family: 'Ageo';
+    font-size: 16px;
+    height: 50px;
+    padding-left: 23px;
+    padding-right: 23px;
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+    transition: .3s cubic-bezier(0.22, 0.9, 0.2, 0.9);
+}
+
+.category-cont .category-button-highlighted:hover {
+    background: #414141;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+    /* padding: 10px; */
+    border-left: 4px solid #e4e4e4;
+    border-right: 4px solid #e4e4e4;
+    background: #2a2a2a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #2a2a2a;
+    border-radius: 10px;
+}
+
+.products-cont {
+    width: calc(100% - 10px);
+    /* overflow-y: scroll; */
+
+}
+
+.products-cont form {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.products-cont #form {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.product-cont ::-webkit-scrollbar {
+    width: 5px;
+}
+
+.products-cont .product-cont {
+    height: 330px;
+    background: white;
+    border-radius: 15px;
+    margin: 5px;
+    width: 325px;
+    position: relative;
+}
+
+.products-cont .product-cont .product-rating-placeholder {
+    background-image: url(Resources/Icons/icon-rating-placeholder.svg);
+    height: 15px;
+    width: 75px;
+    margin: 10px;
+}
+
+.products-cont .product-cont .product-rating-placeholder .product-rating {
+    background-image: url(Resources/Icons/icon-rating.svg);
+    height: 15px;
+}
+
+.products-cont .product-cont .product-img {
+    width: 305px;
+    height: 200px;
+    background: #ffffff;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    position: relative;
+}
+
+.products-cont .product-cont .product-img .product-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000069;
+    /* opacity: .1; */
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: .5s cubic-bezier(0.22, 0.9, 0.2, 0.9);
+}
+
+
+.products-cont .product-cont .product-img .product-hover p {
+    color: #e4e4e4;
+}
+
+.products-cont .product-cont .product-img:hover>.product-hover {
+    opacity: 1;
+}
+
+.products-cont .product-cont .product-img img {
+    height: inherit;
+}
+
+
+.products-cont .product-cont p {
+    margin: 10px;
+    font-family: 'Ageo';
+    font-size: 16px;
+    width: 305px;
+    overflow: hidden;
+}
+
+
+.products-cont .product-cont .product-detail {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products-cont .product-cont .product-detail p {
+    font-family: 'Ageo';
+    font-size: 25px;
+    width: auto;
+    color: #2A2A2A;
+}
+
+.products-cont .product-cont .product-detail p span {
+    font-family: sans-serif;
+    margin-right: 5px;
+    font-size: 20px;
+
+}
+
+.products-cont .product-cont .product-detail .product-options {
+    display: flex;
+}
+
+.products-cont .product-cont .product-detail .product-options .product-like {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+    transition: .3s cubic-bezier(0.25, 0.85, 0.26, 0.87);
+    border-radius: 100px;
+}
+
+
+.products-cont .product-cont .product-detail .product-options .product-like:hover {
+    background: #eb574929;
+}
+
+
+.products-cont .product-cont .product-detail .product-options .product-like:hover>img {
+    content: url(Resources/Images/icon-like-hovered.png);
+}
+
+
+.products-cont .product-cont .product-detail .product-options .product-like:hover>#liked {
+    content: url(Resources/Images/icon-liked.png);
+
+}
+
+.products-cont .product-cont .product-detail .product-options .product-like img {
+    width: 25px;
+
+}
+
+
+.products-cont .product-cont .product-detail .product-options .product-cart {
+    border: none;
+    background: none;
+
+    cursor: pointer;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 100px;
+}
+
+
+.products-cont .product-cont .product-detail .product-options .product-cart:hover {
+    background: #e4e4e496;
+}
+
+.products-cont .product-cont .product-detail .product-options .product-cart img {
+    width: 25px;
+
+}
+
+
+.search-response-result-cont {
+    width: 90%;
+
+}
+
+.search-response-result-cont p {
+    padding: 10px;
+    font-family: 'Ageo';
+    margin: 5px;
+}
+
+
+
+.nav-account-dropdown {
+    width: 200px;
+    background: white;
+    position: absolute;
+    top: 50px;
+    margin-top: 10px;
+    margin-right: 13px;
+
+    right: -5vw;
+    z-index: 5;
+    /*transform: translateY(-300px);*/
+    transition: 0.4s ease;
+    overflow: hidden;
+
+    height: 0px;
+    padding: 0px;
+    border-radius: 5px;
+}
+
+.nav-account-dropdown a {
+    color: #2a2a2a !important;
+    height: 40px;
+    display: block;
+    font-size: 16px !important;
+    /* margin: 10px; */
+    display: flex;
+    width: 170px;
+    margin-left: 10px;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+.nav-account-dropdown a:hover {
+    background-color: #F3F3F3;
+
+}
+
+.bg-darker {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: black;
+    z-index: 4;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s cubic-bezier(0.11, 0.81, 0.13, 0.81);
+}
+
+.notifier-cont {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    pointer-events: none;
+    top: 0;
+}
+
+.notifier-cont .cart-changes-notifier {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 450px;
+    background: #1d1d1d;
+    height: 60px;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    transform: translateY(-10px);
+    pointer-events: all;
+    transition: .3s cubic-bezier(0.22, 0.9, 0.2, 0.9);
+    animation-duration: .3s cubic-bezier(0.22, 0.9, 0.2, 0.9);
+}
+
+
+.notifier-cont .cart-changes-notifier p {
+    font-family: 'Ageo';
+    color: #ffffff;
+    font-size: 15px;
+    margin: 20px;
+}
+
+
+.notifier-cont .cart-changes-notifier .cart-button-cont {
+    height: 40px;
+    margin: 10px;
+}
+
+.notifier-cont .cart-changes-notifier .cart-button-cont #cart-save {
+    background: #4ec64d;
+
+}
+
+
+.notifier-cont .cart-changes-notifier .cart-button-cont #cart-save p {
+    color: #2A2A2A;
+    font-family: 'Ageo';
+    font-size: 15px;
+}
+
+.notifier-cont .cart-changes-notifier .cart-button-cont #cart-save:hover {
+    background: #a6e1a6;
+
+
+}
+
+.notifier-cont .cart-changes-notifier .cart-button-cont button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+    transition: .3s cubic-bezier(0.19, 0.82, 0.17, 0.83);
+}
+
+.notifier-cont .cart-changes-notifier .cart-button-cont button p {
+    margin: 10px;
+    color: #e4e4e4;
+}
+
+.notifier-cont .cart-changes-notifier .cart-button-cont button:hover {
+    background-color: #2A2A2A;
+}
+
+
+#notifier-cont-cart-id {
+    transform: translateY(60px);
+    animation-fill-mode: forwards;
+    animation-duration: .8s;
+    animation-timing-function: cubic-bezier(0.32, 1.87, 0.74, 0.8)
+}
+
+.notifier-cont .action-notifier {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 300px;
+    background: #2A2A2A;
+    height: 50px;
+    border-radius: 15px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    pointer-events: all;
+    transition: .3s;
+    animation-name: notify_action_anim;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+
+    transform: translateY(-10px);
+
+}
+
+@keyframes notify_action_anim {
+    from {
+
+        transform: translateY(-10px);
+    }
+
+    to {
+
+        transform: translateY(50px);
+    }
+
+}
+
+.notifier-cont .action-notifier p {
+    font-family: 'Ageo';
+    color: #e4e4e4;
+    font-size: 15px;
+
+}
+
+.notifier-cont .action-notifier p a {
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    cursor: pointer;
+
+
+}
+
+.notifier-cont .action-notifier p a:hover {
+    text-decoration: underline;
+    color: #eb5749;
+}
+
+.notifier-cont .log-in-notifier {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 400px;
+    background: white;
+    height: 50px;
+    border-radius: 15px;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    transform: translateY(50px);
+    pointer-events: all;
+    transition: .3s cubic-bezier(0.17, 0.81, 0.18, 0.81);
+}
+
+.notifier-cont .log-in-notifier p {
+    font-family: 'Ageo';
+
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.notifier-cont .log-in-notifier button {
+    background: #2a2a2a;
+    color: white;
+    height: 40px;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.notifier-cont .log-in-notifier button p {
+    font-family: 'Squatina';
+    font-size: 25px;
+    font-weight: 100;
+    transform: translateY(-5px);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.notifier-cont .log-in-notifier button:hover {
+    background: #393939;
+}
+
+
+
+.main-product {
+    height: 530px;
+    width: 90%;
+    background: white;
+    margin: 10px;
+
+    display: flex;
+    border-radius: 15px;
+    margin-left: 5vw;
+    margin-top: 100px;
+
+}
+
+.main-product .product-image-cont {
+    height: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 510px;
+}
+
+
+.main-product .product-image-cont .image-main {
+    height: 510px;
+    background-color: #f3f3f3;
+
+    border-radius: 10px;
+}
+
+.main-product .product-image-cont .image-main .img {
+    width: 510px;
+    height: 510px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.main-product .product-details-cont {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% - 510px);
+    position: relative;
+    overflow: hidden;
+}
+
+.main-product .product-details-cont .selected-product-details h6 {
+    color: #2a2a2a;
+    font-family: 'Ageo';
+    font-size: 16px;
+}
+
+.main-product .product-details-cont .selected-product-details h1 {
+    color: #EB5749;
+    font-family: 'Ageo';
+    font-size: 20px;
+    font-weight: 100;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.main-product .product-details-cont .selected-product-details h2 {
+    font-family: 'Ageo';
+    color: #2A2A2A;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.main-product .product-details-cont .selected-product-details h2 span {
+    font-family: sans-serif;
+}
+
+.main-product .product-details-cont .selected-product-details .product-rating {
+    display: flex;
+    align-items: center;
+
+}
+
+.main-product .product-details-cont .selected-product-details .product-rating p {
+    font-family: 'Squatina';
+    color: #EB5749;
+    font-size: 20px;
+}
+
+.main-product .product-details-cont .selected-product-details .product-rating .product-rating-placeholder {
+    background-image: url(Resources/Icons/icon-rating-placeholder.svg);
+    height: 15px;
+    width: 75px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.main-product .product-details-cont .selected-product-details .product-rating .product-rating-placeholder .product-rating {
+    background-image: url(Resources/Icons/icon-rating.svg);
+    height: 15px;
+}
+
+
+.main-product .product-details-cont .selected-product-order {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.main-product .product-details-cont .selected-product-order .product-quantity {
+    display: flex;
+    width: 250px;
+    margin: auto;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.main-product .product-details-cont .selected-product-order .product-quantity label {
+    font-family: 'Ageo';
+    font-size: 16px;
+    color: #2a2a2a;
+    margin: 10px;
+
+}
+
+.main-product .product-details-cont .selected-product-order .product-quantity .product-deduct {
+
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: #2a2a2a;
+    cursor: pointer;
+
+    background-image: url(Resources/Images/icon-prev-inverted.png);
+}
+
+
+.main-product .product-details-cont .selected-product-order .product-quantity .product-deduct:hover {
+    background-color: #414141;
+}
+
+
+
+.main-product .product-details-cont .selected-product-order .product-quantity .product-add {
+
+
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: #2a2a2a;
+    cursor: pointer;
+
+    background-image: url(Resources/Images/icon-next-inverted.png);
+}
+
+
+
+
+.main-product .product-details-cont .selected-product-order .product-quantity .product-add:hover {
+    background-color: #414141;
+}
+
+
+.main-product .product-details-cont .selected-product-order .product-quantity input {
+
+
+    text-align: center;
+    border: none;
+    outline: none;
+    background: #f3f3f3;
+    width: 75px;
+    border-radius: 100px;
+    font-family: 'Ageo';
+    height: 35px;
+    color: #2a2a2a;
+    font-size: 16px;
+    transition: .3s ease-out;
+    margin: 10px;
+}
+
+.main-product .product-details-cont .selected-product-order .product-action {
+    width: 250px;
+    margin: auto;
+    display: flex;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+
+.main-product .product-details-cont .selected-product-order .product-action .add-cart {
+    height: 50px;
+    border: none;
+    border-radius: 100px;
+    background: #2a2a2a;
+    color: white;
+    /* padding: 10px; */
+    width: 200px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.main-product .product-details-cont .selected-product-order .product-action .add-cart:hover {
+
+    background: #414141;
+}
+
+.main-product .product-details-cont .selected-product-order .product-action .add-cart p {
+    font-family: 'Ageo';
+    font-size: 16px;
+    font-weight: 100;
+    place-self: center;
+}
+
+.main-product .product-details-cont .selected-product-order .product-action .add-cart img {
+    width: 22px;
+    margin-top: 13px;
+    margin-left: 10px;
+    height: 20px;
+}
+
+
+.main-product .product-details-cont .selected-product-order .product-action .add-like {
+    border: none;
+    background: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.main-product .product-details-cont .selected-product-order .product-action .add-like img {
+    height: 20px;
+
+}
+
+
+.product-user-pref {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* margin-top: 85px; */
+    top: 60px;
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.product-user-pref h1 {
+    margin: 10px;
+    font-family: 'Ageo';
+    font-weight: 100;
+    font-size: 50px;
+}
+
+
+
+
+
+
+.my-cart-cont .cart-product-info-cont {
+    width: initial;
+    display: flex;
+    background: white;
+    margin: 10px;
+    border-radius: 15px;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.my-cart-cont .cart-product-info-cont p {
+    font-size: 16px;
+    font-family: 'Ageo';
+    margin: 10px;
+    color: #2a2a2a;
+    width: 35px;
+    text-align: center;
+}
+
+
+.my-cart-cont .cart-product-info-cont #label-details {
+    width: 320px;
+}
+
+
+.my-cart-cont .cart-product-info-cont #label-quantity {
+    width: 145px;
+}
+
+.my-cart-cont .cart-product-info-cont #label-total {
+    width: 60px;
+    text-align: left;
+}
+
+
+.my-cart-cont {
+
+    width: 70%;
+    height: calc(100vh - 119px);
+    overflow-y: scroll;
+}
+
+.my-cart-cont .cart-product-cont {
+    position: absolute;
+    width: calc(100% - 20px);
+    height: 120px;
+    display: flex;
+    background: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s ease-out;
+}
+
+.my-cart-cont .cart-product-cont .cart-product-cost {
+    width: 80px;
+
+}
+
+.my-cart-cont .cart-product-cont .cart-product-cost p {
+    font-family: 'Ageo';
+    display: flex;
+    font-size: 20px;
+    color: #2A2A2A;
+}
+
+.my-cart-cont .cart-product-cont .cart-product-cost p input {
+    font-family: 'Ageo';
+    font-size: 20px;
+    width: 65px;
+    background: none;
+    border: none;
+
+}
+
+.my-cart-cont .cart-product-cont .cart-product-delete {
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: #2a2a2a;
+    cursor: pointer;
+    margin-right: 20px;
+    background-image: url(Resources/Images/icon-delete-inverted.png)
+}
+
+.my-cart-cont .cart-product-cont .cart-product-delete:hover {
+    background-color: #414141;
+}
+
+.my-cart-cont .cart-product-cont .cart-product-cost p span {
+    font-family: sans-serif;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.my-cart-cont .cart-product-cont .cart-product-details {
+    display: flex;
+    align-items: center;
+}
+
+.my-cart-cont .cart-product-cont .cart-product-details .cart-product-img {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s cubic-bezier(0.16, 0.82, 0.13, 0.84);
+}
+
+.my-cart-cont .cart-product-cont .cart-product-details .cart-product-img:hover {
+    filter: brightness(0.75);
+}
+
+.my-cart-cont .cart-product-cont .cart-product-details .cart-product-name-cost {
+    width: 200px;
+    margin: 10px;
+}
+
+
+.my-cart-cont .cart-product-cont .cart-product-details .cart-product-name-cost p {
+    font-family: 'Ageo';
+    font-size: 16px;
+}
+
+.my-cart-cont .cart-product-cont .cart-product-details .cart-product-name-cost .price {
+    font-family: 'Ageo';
+    color: #EB5749;
+    font-size: 16px;
+}
+
+.my-cart-cont .cart-product-cont .cart-product-details .cart-product-name-cost .price span {
+    font-family: sans-serif;
+}
+
+
+.my-cart-cont .cart-product-cont .cart-product-amount-cont {
+    display: flex;
+}
+
+.my-cart-cont .cart-product-cont .cart-product-amount-cont .product-deduct {
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: #2a2a2a;
+    cursor: pointer;
+    margin-right: 10px;
+    background-image: url(Resources/Images/icon-prev-inverted.png);
+}
+
+
+.my-cart-cont .cart-product-cont .cart-product-amount-cont .product-deduct:hover {
+    background-color: #414141;
+}
+
+
+
+.my-cart-cont .cart-product-cont .cart-product-amount-cont .product-add {
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: #2a2a2a;
+    cursor: pointer;
+    margin-left: 10px;
+    background-image: url(Resources/Images/icon-next-inverted.png);
+}
+
+
+.my-cart-cont .cart-product-cont .cart-product-amount-cont .product-add:hover {
+    background-color: #414141;
+}
+
+
+.my-cart-cont .cart-product-cont .cart-product-amount-cont input {
+    text-align: center;
+    border: none;
+    outline: none;
+    background: #f3f3f3;
+    width: 75px;
+    border-radius: 100px;
+    font-family: 'Ageo';
+    color: #2a2a2a;
+    font-size: 16px;
+    transition: .3s ease-out;
+}
+
+
+.my-cart-cont .cart-product-cont .cart-product-amount-cont input:focus {
+    background-color: #e4e4e4;
+}
+
+
+.my-transaction-cont {
+    width: 50%;
+    height: max-content;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
+
+
+.my-transaction-cont .details-input {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    position: relative;
+    background: #F3F3F3;
+    border-radius: 5px;
+    padding: 7.5px;
+    flex: 1;
+}
+
+.my-transaction-cont .details-input-h {
+    display: flex;
+  
+
+}
+
+.my-transaction-cont #card-details-input-id {
+    align-items: center;
+    height: 0px;
+    /* 65px*/
+    overflow: hidden;
+    opacity: 0;
+    transition: .3s cubic-bezier(0.24, 0.79, 0.23, 0.83);
+}
+
+.my-transaction-cont .details-input label {
+    font-size: 10px;
+    font-family: 'AgeoBold';
+    color: #2a2a2a;
+    opacity: 0.75;
+}
+
+
+.my-transaction-cont .details-input input {
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-family: 'Ageo';
+    color: #2a2a2a;
+    background: none;
+    transform: translateY(5px);
+    width: 100%;
+}
+
+#card-number{
+    filter: blur(5px);
+}
+
+#card-number:focus{
+    filter: blur(0px);
+}
+
+#security-code{
+    filter: blur(5px);
+}
+
+#security-code:focus{
+    filter: blur(0px);
+}
+
+
+
+.my-transaction-cont .details-input input::placeholder {
+    opacity: 0.5;
+}
+
+
+.my-transaction-cont .transaction-details-class {
+    margin-left: 5%;
+    width: 90%;
+}
+
+.my-transaction-cont .transaction-details-class h1 {
+    font-family: 'Ageo';
+    font-size: 16px;
+    margin: 10px;
+    font-weight: 100;
+    margin-top: 30px;
+}
+
+.my-transaction-cont .transaction-details-class #card-title-id {
+    opacity: 0;
+    transition: .3s cubic-bezier(0.24, 0.79, 0.23, 0.83);
+}
+
+.my-transaction-cont .transaction-details-class .details-input-p {
+    margin: 15px;
+    color: #2a2a2a87;
+    font-family: 'Ageo';
+
+}
+
+
+
+.my-transaction-cont .transaction-details-class .details-input-p input {
+    cursor: pointer;
+}
+
+
+.my-transaction-cont .transaction-details-class .details-input-p label {
+    cursor: pointer;
+}
+
+.my-transaction-cont .transaction-details-class .details-input-p input[type="radio"]:checked {
+    accent-color: #eb5749;
+}
+
+
+.my-transaction-cont .payment-confirm-transaction {
+    margin: 20px;
+    margin-left: calc(5% + 10px);
+    width: calc(90% - 20px);
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2a2a2a;
+    color: white;
+    font-family: 'Ageo';
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+#d-i-1 {
+    flex: 1;
+}
+
+#d-i-2 {
+    flex: 2;
+}
+
+#d-i-3 {
+    flex: 3;
+}
+
+.product-user-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* margin-top: 85px; */
+    top: 60px;
+    height: calc(100vh - 60px);
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.user-location {
+    display: flex;
+    width: calc(90% - 30px);
+    font-family: 'Ageo';
+    margin: 10px;
+
+}
+
+.user-location a {
+    color: #2a2a2a;
+    text-decoration: none;
+    margin: 10px;
+    opacity: 0.8;
+}
+
+.user-location a:hover {
+
+    opacity: 1;
+}
+
+.user-location p {
+    margin-top: 5px;
+    font-family: monospace;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.user-location #current-dir {
+    color: #EB5749;
+}
+
+.action-cont {
+    display: none;
+
+}
+
+.action-cont textarea {
+    display: none;
+}
+
+.cart-product-cont-whole {
+    position: relative;
+}
+
+.cart-product-cont-whole .cart-product-placeholder-solid {
+    width: calc(100% - 20px);
+    height: 120px;
+    margin: 10px;
+    transition: height .3s ease-out;
+
+}
+
+
+#list-cart {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-top: 1px dashed#2a2a2a52;
+    border-bottom: 1px dashed #2a2a2a52;
+}
+
+
+
+
+
+.my-order-cont {
+    width: 30%;
+}
+
+.my-order-cont .order-list-cont {
+    background-color: white;
+
+    width: initial;
+    margin-left: 5%;
+    height: 375px;
+    border-radius: 15px;
+    position: relative;
+}
+
+
+
+.my-order-cont .order-list-cont .order-detail p {
+    text-align: center;
+    font-family: 'Ageo';
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.my-order-cont .order-list-cont .order-detail #order-title {
+    margin-bottom: 50px;
+}
+
+.my-order-cont .order-list-cont .order-detail hr {
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 80%;
+    border-top: dashed #2a2a2a 1px;
+    opacity: 0.5;
+
+}
+
+
+.my-order-cont .order-list-cont .order-detail {
+    margin-top: 10px;
+}
+.my-order-cont .order-list-cont .order-detail div {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    left: 0;
+    position: relative;
+    right: 0;
+    margin: auto;
+}
+
+
+.my-order-cont .order-list-cont .order-detail div p {
+    font-size: 16px;
+}
+
+
+
+
+.my-order-cont .order-list-cont #order-confirmed-checkout {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    user-select: none;
+}
+
+.my-order-cont .order-list-cont .order-checkout-button {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 50px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.my-order-cont .order-list-cont .order-checkout-button p {
+    font-family: 'Ageo';
+    color: #e4e4e4;
+    font-size: 20px;
+
+}
+
+
+.my-order-cont .order-list-cont .order-checkout-button:hover {
+    background: #393939;
+}
+
+
+#user-location-id {
+    top: 75px;
+    margin-left: 5vw;
+    position: relative;
+    z-index: 3;
+
+}
+
+
+#p-user-cart-transaction-cont {
+    overflow-y: scroll;
+}
+
+#payment-submit-id {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    user-select: none;
+
+}
+
+#total-val-inv {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    user-select: none;
+}
+
+
+
+
+.cart-empty {
+    width: 30%;
+    background: white;
+    border-radius: 15px;
+    margin-top: 150px;
+    height: 200px;
+    position: relative;
+    margin-bottom: 150px;
+}
+
+.cart-empty p {
+    font-family: 'Ageo';
+    font-size: 20px;
+    color: #2a2a2a;
+    margin: 20px;
+    text-align: center;
+
+}
+
+
+
+.cart-empty a {
+    font-family: 'Squatina';
+    font-size: 30px;
+    background: #2a2a2a;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 100px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    /* margin-right: 160px; */
+    margin-left: calc(50% - 80px);
+    text-decoration: none;
+    position: absolute;
+    bottom: 30px;
+}
+
+
+.cart-empty a:hover {
+    background: #393939;
+}
+
+#main-logo-text {
+    cursor: pointer;
+
+}
+
+#main-logo-text:hover {
+    color: #EB5749;
+}
+
+
+.page-type {
+    width: 80%;
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.page-type .image-display {
+    width: 30%;
+    margin: 10%;
+    padding-top: 30%;
+    background-image: url(Resources/Images/main-cat.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+.page-type .text-display {
+    font-family: 'Ageo';
+    font-size: 16px;
+    color: #2a2a2a;
+    width: 50%;
+}
+
+.page-type .text-display h1 {
+    font-weight: 100;
+    font-size: 40px;
+    margin: 10px;
+}
+
+.page-type .text-display h2 {
+    color: #EB5749;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.page-type .text-display p {
+    margin: 10px;
+}
+
+#page-type-id {
+    display: inline;
+}
+
+#text-display-id {
+    width: 100%;
+}
+#no-categ{
+    margin: 100px;
+}
+#re-center-empty{
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+.text-compile {
+    display: flex
+}
+
+.text-divide {
+    border-radius: 15px;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+/*over ride nav bar light mode */
+/*
+.navbar{
+    background-color: #ffffff;
+    color: #2A2A2A;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    border-bottom: 1px solid #e4e4e4;
+    z-index: 10;
+    width: 100vw;
+
+}
+
+.navbar .nav-sections a{
+    color: #2a2a2a;
+}
+.navbar .nav-user {
+    color: #2a2a2a;
+}
+.navbar .nav-user .nav-cart img{
+    content: url(Resources/Images/icon-cart.png);
+    
+}
+.navbar .nav-user .nav-account img{
+    content: url(Resources/Images/icon-user.png);
+    
+}
+
+.navbar .nav-user .nav-cart:hover{
+    background-color: #00000014;
+}
+
+.navbar .nav-user .nav-account:hover{
+    
+    background-color: #00000014;
+}
+
+.navbar .nav-user .nav-cart p{
+    background: none;
+    color: #2a2a2a;
+*/
+
+
+
+@media only screen and (max-width: 775px) {
+    #list-cart{
+        flex-direction:column-reverse;
+    }
+    .my-order-cont{
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+    .my-order-cont .order-list-cont{
+        margin: 0px;
+    }
+    .my-transaction-cont .details-input-h{
+        width: 100%;
+    }
+    .my-cart-cont{
+        width: 100%;
+    }
+
+    
+    .my-cart-cont::-webkit-scrollbar {
+        width:0px;
+    }
+
+    .my-transaction-cont{
+        width: calc(100% - 20px);
+        margin: 10px;
+        padding: 0px;
+    }
+
+
+    .my-transaction-cont .details-input input{
+        width: 100%;
+    }
+    .my-cart-cont .cart-product-cont .cart-product-details .cart-product-name-cost{
+        width: min-content;
+    }
+}
+

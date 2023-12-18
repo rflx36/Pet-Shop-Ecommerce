@@ -1,0 +1,140 @@
+
+@font-face {
+    font-family: Ageo;
+    src: url(Resources/Fonts/AgeoPersonalUse-Medium.otf);
+}
+
+
+@font-face {
+    font-family: Squatina;
+    src: url(Resources/Fonts/Squatina-Regular.otf);
+}
+
+
+.side-bar{
+    width: 250px;
+    background: white;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    z-index: 5;
+    left: 0;
+    overflow-x: hidden;
+}
+.side-bar h1{
+    font-family: 'Squatina';
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    margin: 20px;
+}
+.side-bar .side-bar-selection{
+    width: 80%;
+    display: block;
+    margin: 10px;
+    margin-left: 10%;
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-family: 'Ageo';
+    text-decoration: none;
+    color: #6c6c6c;
+    position: relative;
+   
+}
+
+.side-bar .side-bar-selection .selection-highlight{
+    width: 5px;
+    height: 0%;
+    background: #bfbfbf;    
+    position: absolute;
+    right: -30px;
+    border-radius: 5px;
+    transition: .3s cubic-bezier(0.23, 0.79, 0.26, 0.84);
+}
+.side-bar .side-bar-selection:hover{
+    color: #2A2A2A;
+    background: #f3f3f3;
+}
+
+
+.side-bar .side-bar-selection:hover >  .selection-highlight{
+    right: -25px;
+    height: 100%;
+}
+
+.side-bar .side-bar-selection .sidebar-icons{
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    opacity: 0.3;
+}
+.side-bar .side-bar-selection #icon-dashboard{
+    background-image: url(Resources/Icons/icon-dashboard.svg);
+}
+.side-bar .side-bar-selection #icon-products{
+    background-image: url(Resources/Icons/icon-products.svg);
+}
+.side-bar .side-bar-selection #icon-transactions{
+    background-image: url(Resources/Icons/icon-transaction.svg);
+}
+.side-bar .side-bar-selection #icon-orders{
+    background-image: url(Resources/Icons/icon-orders.svg);
+}
+
+.side-bar .side-bar-selection p{
+    margin: 10px;
+}
+
+
+.side-bar #side-bar-selected{
+    
+    background: #eb57491a;   
+}
+.side-bar #side-bar-selected p{
+    color: #EB5749;
+}
+
+.side-bar #side-bar-selected .sidebar-icons{
+
+    opacity: 1;
+}
+.side-bar #side-bar-selected .selection-highlight{
+    right: -25px;
+    background: #EB5749;   
+    height: 100%;
+}
+
+.side-bar #side-bar-selected #icon-dashboard{
+    background-image: url(Resources/Icons/icon-dashboard-selected.svg);
+}
+
+
+.side-bar #side-bar-selected #icon-products{
+    background-image: url(Resources/Icons/icon-products-selected.svg);
+}
+
+
+.side-bar #side-bar-selected #icon-transactions{
+    background-image: url(Resources/Icons/icon-transaction-selected.svg);
+}
+
+.side-bar #side-bar-selected #icon-orders{
+    background-image: url(Resources/Icons/icon-orders-selected.svg);
+}
+
+
+
+.side-bar #log-out{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Ageo';
+    text-decoration: none;
+    color: #2a2a2a;
+    font-size: 16px;
+}

@@ -1,0 +1,74 @@
+.nav-toggler{
+    background-image: url(Resources/Icons/icon-hamburger-docked.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+.nav-toggler:hover{
+    
+    background-color: #1d1d1d;
+}
+
+
+.nav-user-cont{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    display: flex;
+    margin: 0;
+    text-align: left;
+    color: white;
+    width: 100%;
+    z-index: 10;
+    height: 100%;
+    z-index: 10;
+    background-color: #2a2a2aed;
+    display: none;
+  
+}
+.nav-user-cont a{
+    font-size: 20px;
+    font-family: 'Ageo';
+    text-decoration: none;
+    color: white;
+    width: calc(100% - 60px);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    transition: .3s cubic-bezier(0.28, 0.88, 0.18, 0.9);
+    
+}
+
+
+.nav-user-cont a:hover{
+    background: #1d1d1d9f;
+}
+
+@media only screen and (max-width: 775px) {
+
+    .navbar .nav-sections{
+        display: none;
+    }
+    .navbar .nav-user .nav-account{
+        display: none;
+    }
+
+    .nav-toggler{
+        display: block;
+    }
+    .navbar .nav-user .nav-cart{
+        margin-right: 0px;
+    }
+    .navbar .nav-user{
+        margin-right: 2.5vw;
+    }
+
+       
+}

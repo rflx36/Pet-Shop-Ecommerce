@@ -1,0 +1,62 @@
+body{
+    overflow-y: scroll;
+}
+
+
+
+
+
+.main-products-details-cont{
+    margin: auto;
+    width: 90%;
+    height: max-content;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.main-products-details-cont .products-details-title-cont h1 {
+    font-family: 'Ageo';
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    color: #2a2a2a;
+    font-weight: 100;
+}
+
+.product-details-cont{
+    
+    display: flex;
+}
+.main-products-details-cont .product-display-divider{
+    flex: 1;
+    margin: 10px;
+    border-radius: 10px;
+    background: #f3f3f3;
+    overflow: hidden;
+}
+
+.main-products-details-cont .product-display-divider p {
+    font-family: 'Ageo';
+    color: #2a2a2a;
+    font-size: 16px;
+    width: 50%;
+}
+.main-products-details-cont .product-display-divider .product-display-detail-a{
+    display: flex;
+    padding: 10px;
+    height: 20px;
+}
+
+.main-products-details-cont .product-display-divider .product-display-detail-b{
+    display: flex;
+    background-color: #e4e4e4;
+    padding: 10px;
+    height: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}

@@ -1,0 +1,149 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+}
+
+.navbar .nav-sections{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+
+.navbar .nav-sections a{
+    text-decoration: none;
+    margin: 20px;
+    color: #2a2a2a;
+    font-family: 'Ageo';
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.navbar .nav-sections a:hover{
+    color: #ec704b;
+}
+section{
+    background-image: url(Resources/Images/main-bg-curve.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-size: contain;
+    z-index: -3;
+}
+
+.main-start-disp{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-start-disp img{
+    width: 500px;
+}
+.main-start-disp p {
+    font-family: Ageo;
+    color: #393939;
+    font-size: 22px;
+   
+}
+.main-start-disp p span{
+    font-family: Squatina;
+    color: white;
+    background: #ec704b;
+    padding: 1px;
+    font-weight: 100;
+    
+}
+.main-start-disp-button{
+    width: 250px;
+    height: 50px;
+    background-color: #2A2A2A;
+    border-radius: 100px;
+    display: flex;
+    cursor: pointer;
+}
+.main-start-disp-button:hover{
+    
+    background-color: #393939;
+}
+
+.main-start-disp-button p {
+    font-family: Squatina;
+    width: 170px;
+    font-size: 40px;
+    color: white;
+    /* margin: 0; */
+    font-weight: 100;
+    margin-left: 20px;
+    margin-top: 1px;
+
+}
+
+.main-start-disp-button img{
+    width: 22px;
+    margin: auto;
+    height: 18px;
+}
+
+
+
+
+.main-title{
+    position: absolute;
+    top: 0;
+    left:  0;
+    z-index: -2;
+
+}
+
+.main-title #m-t-a{
+    font-family: 'Squatina';
+    font-size: 18vw;
+    font-weight: 100;
+    color: #2A2A2A;
+    margin-left: 40vw;
+}
+
+
+.main-title #m-t-b{
+    font-family: 'Ageo';
+    font-size: 10vw;
+    font-weight: 100;
+    color: #ec704b;
+    margin-left: 40vw;
+    margin-top: 15vw;
+}
+
+.main-title #m-t-c{
+    font-family: 'Squatina';
+    font-size: 16vw;
+    font-weight: 100;
+    color: #2A2A2A;
+    margin-left: 50vw;
+    margin-top: 15vw;
+
+
+}
+
+
+
+
+
+@font-face {
+    font-family: Squatina;
+    src: url(Resources/Fonts/Squatina-Regular.otf);
+}
+
+@font-face {
+    font-family: Ageo;
+    src: url(Resources/Fonts/AgeoPersonalUse-Medium.otf);
+}

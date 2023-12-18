@@ -1,0 +1,86 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #e4e4e4;
+    display: flex;
+}
+
+
+body .main-content{
+    width: calc( 100% - 250px);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.product-add-container{
+    width: 400px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: none;
+}
+
+
+form{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.update-cont{
+    width: 300px;
+    z-index: 3;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: 50vh;
+}
+table{
+    position: absolute;
+    margin-top: 100vh;
+}
+
+
+#dark-bg {
+    background: black;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    pointer-events: none;
+
+}
+
+
+
+.tabs {
+    display: flex;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab-content {
+    display: none;
+}
+
+.chart-container {
+    width: 80%;
+    margin: 20px auto;
+}

@@ -1,0 +1,160 @@
+
+.search-cont {
+    width: 800px;
+    height: 50px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    margin-bottom: 0px;
+
+}
+
+
+.search-cont .search-sort-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search-cont .search-sort-button img {
+    margin: 10px;
+}
+
+.search-cont .search-sort-button p {
+    font-family: 'Ageo';
+    font-size: 16px;
+
+    margin-top: 4px;
+}
+
+.search-cont .search-input {
+    display: flex;
+    flex-direction: row;
+    background: #e4e4e4;
+    margin: 10px;
+    height: 30px;
+    align-items: center;
+
+    border-radius: 100px;
+
+}
+
+.search-cont .search-input img {
+    height: 11px;
+    margin: 10px;
+}
+
+.search-cont .search-input input {
+    outline: none;
+    border: none;
+    transition: .3s cubic-bezier(0.22, 0.9, 0.2, 0.9);
+    height: 30px;
+    width: 200px;
+    border-radius: 100px;
+    background-color: #e4e4e4;
+}
+
+.search-cont input:focus {
+    width: 300px;
+}
+
+.search-cont .search-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-cont .search-page div {
+
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.search-cont .search-page #search-highlighted {
+    background: #2A2A2A;
+
+}
+
+.search-cont .search-page #search-highlighted a {
+
+    color: white;
+
+}
+
+.search-cont .search-page div a {
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #2A2A2A;
+    font-family: 'Squatina';
+}
+
+.search-cont .search-button {
+    height: 40px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    background: #2a2a2a;
+    color: white;
+    margin: 5px;
+    font-family: 'Squatina';
+    font-size: 30px;
+    cursor: pointer;
+    justify-content: center;
+    transition: .3s cubic-bezier(0.22, 0.9, 0.2, 0.9);
+}
+
+.search-cont .search-button img {
+
+    transition: .3s cubic-bezier(0.22, 0.9, 0.2, 0.9);
+}
+
+.search-cont .search-button:hover {
+    background-color: #414141;
+    padding-left: 30px;
+
+
+}
+
+.search-cont .search-button:hover>img {
+    width: 50px;
+}
+
+.search-cont .search-button img {
+    width: 0px;
+}
+
+@media only screen and (max-width: 775px) {
+
+    .search-cont{
+        width: calc(100% - 40px);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }
+    .search-cont .search-input input{
+        width: 100%;
+    }
+
+    section #search-form-cont{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .search-cont .search-button:hover>img{
+        width: 0px;
+    }
+}
